@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+Topsis_NishthaGupta_102303998/__init__.py
+Topsis_NishthaGupta_102303998/topsis.py
+Topsis_NishthaGupta_102303998.egg-info/PKG-INFO
+Topsis_NishthaGupta_102303998.egg-info/SOURCES.txt
+Topsis_NishthaGupta_102303998.egg-info/dependency_links.txt
+Topsis_NishthaGupta_102303998.egg-info/entry_points.txt
+Topsis_NishthaGupta_102303998.egg-info/top_level.txt

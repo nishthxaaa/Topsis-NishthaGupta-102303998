@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: Topsis-NishthaGupta-102303998
+Version: 1.0.0
+Summary: A Python package for implementing TOPSIS technique.
+Home-page: https://github.com/nishthxaaa/topsis
+Author: Nishtha Gupta
+Author-email: ngupta2_be23@thapar.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
+# TOPSIS-NishthaGupta-102303998
+
+A Python package to implement the Topsis technique.
+
+## Installation
+```bash
+pip install Topsis-NishthaGupta-102303998
