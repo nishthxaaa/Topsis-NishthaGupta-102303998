@@ -41,7 +41,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -131,14 +130,6 @@ streamlit run app.py
 * **Step 3:** Enter impacts (+ or -).
 * **Step 4:** View results and download the ranking file.
 
-## Roadmap
-
-- [x] Core TOPSIS Algorithm Implementation
-- [x] Command Line Interface (CLI)
-- [x] Published to PyPI
-- [x] Streamlit Web Application
-- [ ] Add visualization (Bar charts for rankings)
-- [ ] Live email integration
 
 ## License
 
@@ -146,7 +137,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Nishtha Gupta - [YourEmail@example.com](mailto:YourEmail@example.com)
+Nishtha Gupta - [nishtha19gupta@gmail.com](mailto:nishtha19gupta@gmail.com)
 
 Project Link: [https://github.com/nishthxaaa/Topsis-NishthaGupta-102303998](https://github.com/nishthxaaa/Topsis-NishthaGupta-102303998)
 
