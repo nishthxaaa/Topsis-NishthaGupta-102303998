@@ -1,6 +1,6 @@
 [![PyPI version][pypi-shield]][pypi-url]
 [![License: MIT][license-shield]][license-url]
-[![Python 3.6+](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 
 <br />
 <p align="center">
@@ -13,11 +13,9 @@
   <p align="center">
     A comprehensive Python package and Web Service for Multiple Criteria Decision Making (MCDM) using the TOPSIS technique.
     <br />
-    <a href="https://github.com/nishthxaaa/Topsis-NishthaGupta-102303998"><strong>Explore the docs »</strong></a>
+    <a href="https://pypi.org/project/Topsis-NishthaGupta-102303998/"><strong>View PyPI Package »</strong></a>
     <br />
     <br />
-    <a href="https://pypi.org/project/Topsis-NishthaGupta-102303998/">View PyPI Package</a>
-    ·
     <a href="https://github.com/nishthxaaa/Topsis-NishthaGupta-102303998/issues">Report Bug</a>
     ·
     <a href="https://github.com/nishthxaaa/Topsis-NishthaGupta-102303998/issues">Request Feature</a>
@@ -27,119 +25,127 @@
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
+    <li><a href="#description">Description</a></li>
+    <li><a href="#methodology">Methodology</a></li>
+    <li><a href="#input--output">Input / Output</a></li>
+    <li><a href="#live-link">Live Link</a></li>
+    <li><a href="#screenshots">Screenshots</a></li>
+    <li><a href="#installation">Installation</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
 
-## About The Project
+## Description
 
-**TOPSIS** (Technique for Order of Preference by Similarity to Ideal Solution) is a multi-criteria decision analysis method. It compares a set of alternatives based on a set of criteria, identifying the alternative that is closest to the ideal solution and farthest from the negative ideal solution.
+**TOPSIS-NishthaGupta-102303998** is a Python library and web application designed to solve Multiple Criteria Decision Making (MCDM) problems. It implements the **TOPSIS** (Technique for Order of Preference by Similarity to Ideal Solution) algorithm, which ranks alternatives based on their distance from an ideal best solution and an ideal worst solution.
 
-This project offers a unified solution with three modes of operation:
-1.  **CLI Tool**: Run calculations directly from your command line interface.
-2.  **Python Library**: A plug-and-play package for your Python scripts.
-3.  **Web Service**: A user-friendly Streamlit interface to upload data and get results via email (simulation).
+This project offers a unified solution with three modes:
+1.  **CLI Tool**: For quick terminal-based calculations.
+2.  **Python Library**: For integration into data science scripts.
+3.  **Web Service**: A deployed Streamlit app for easy user access.
 
-### Built With
+## Methodology
 
-* [Python](https://www.python.org/)
-* [Pandas](https://pandas.pydata.org/)
-* [Streamlit](https://streamlit.io/)
-* [NumPy](https://numpy.org/)
+The algorithm generally follows these steps:
+1.  **Normalization**: Convert the decision matrix to a normalized scale.
+2.  **Weighting**: Apply user-defined weights to the criteria.
+3.  **Ideal Solutions**: Determine the Ideal Best ($V^+$) and Ideal Worst ($V^-$) values.
+4.  **Separation Measures**: Calculate the Euclidean distance of each alternative from $V^+$ and $V^-$.
+5.  **Performance Score**: Compute the relative closeness to the ideal solution.
+6.  **Ranking**: Rank alternatives based on the performance score (descending).
 
-## Getting Started
+## Input / Output
 
-To get a local copy up and running, follow these simple steps.
+### Input
+The program requires a CSV or Excel file with the following constraints:
+* **Column 1**: Object Name (e.g., Fund Name, Model Name).
+* **Columns 2 to N**: Numeric values for criteria.
+* **Weights**: Comma-separated integers (e.g., `1,1,1,2`).
+* **Impacts**: Comma-separated signs `+` (beneficial) or `-` (non-beneficial).
 
-### Prerequisites
+### Output
+The output is a CSV file containing:
+* All original columns.
+* **Topsis Score**: The calculated score.
+* **Rank**: The final rank of the alternative.
 
-* Python 3.6 or higher
-* pip
+## Live Link
 
-### Installation
+Access the live application here:
+[**Launch Web App**](https://topsis-nishthagupta-102303998.streamlit.app/)
 
-1. **Install via pip (Recommended)**
-   The easiest way to use the library is to install it directly from PyPI:
-   ```bash
-   pip install Topsis-NishthaGupta-102303998
-   ```
+*Note: The application is hosted on Streamlit Cloud.*
 
-2. **Clone the Repo (For Web App Usage)**
-   If you want to run the Streamlit Web App locally:
-   ```bash
-   git clone [https://github.com/nishthxaaa/Topsis-NishthaGupta-102303998.git](https://github.com/nishthxaaa/Topsis-NishthaGupta-102303998.git)
-   cd Topsis-NishthaGupta-102303998
-   pip install -r requirements.txt
-   ```
+## Screenshots
+
+### Interface View 1
+![App Screenshot 1](Screenshot(1).png)
+
+### Interface View 2
+![App Screenshot 2](Screenshot(2).png)
+
+## Installation
+
+To install the library, run the following command:
+
+```bash
+pip install Topsis-NishthaGupta-102303998
+```
+## Run the Web App Locally
+
+```bash
+git clone https://github.com/nishthxaaa/Topsis-NishthaGupta-102303998.git
+cd Topsis-NishthaGupta-102303998
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+---
 
 ## Usage
 
 ### 1. Command Line Interface (CLI)
-You can use the package directly from your terminal.
 
-**Syntax:**
 ```bash
 topsis <InputDataFile> <Weights> <Impacts> <ResultFileName>
 ```
 
 **Example:**
+
 ```bash
-topsis data.csv "1,1,1,1,1" "+,+,-,+,+" result.csv
+topsis data.csv "1,1,1,1" "+,-,+,+" result.csv
 ```
-*Note: The input file must contain 3 or more columns. The first column is treated as the object/fund name.*
+
+---
 
 ### 2. Python Library
-Import the package in your own Python script to perform calculations programmatically.
 
 ```python
 from Topsis_NishthaGupta_102303998.topsis import topsis
 
-# Define your parameters
-input_file = "data.csv"
-weights = "1,1,1,1,1"
-impacts = "+,+,-,+,+"
-output_file = "result.csv"
-
-# Call the function
-topsis(input_file, weights, impacts, output_file)
+# topsis(input_filename, weights, impacts, output_filename)
+topsis("data.csv", "1,1,1,1", "+,-,+,+", "result.csv")
 ```
 
-### 3. Web Service
-Launch the graphical interface to upload files and download results.
-
-```bash
-streamlit run app.py
-```
-* **Step 1:** Upload your `.csv` or `.xlsx` file.
-* **Step 2:** Enter weights (comma-separated).
-* **Step 3:** Enter impacts (+ or -).
-* **Step 4:** View results and download the ranking file.
-
+---
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the **MIT License**.  
+See the `LICENSE` file for more information.
+
+---
 
 ## Contact
 
-Nishtha Gupta - [nishtha19gupta@gmail.com](mailto:nishtha19gupta@gmail.com)
+**Nishtha Gupta**  
+📧 nishtha19gupta@gmail.com  
 
-Project Link: [https://github.com/nishthxaaa/Topsis-NishthaGupta-102303998](https://github.com/nishthxaaa/Topsis-NishthaGupta-102303998)
+🔗 Project Link:  
+https://github.com/nishthxaaa/Topsis-NishthaGupta-102303998
+
 
 [pypi-shield]: https://img.shields.io/pypi/v/Topsis-NishthaGupta-102303998.svg?style=flat-square
 [pypi-url]: https://pypi.org/project/Topsis-NishthaGupta-102303998/
